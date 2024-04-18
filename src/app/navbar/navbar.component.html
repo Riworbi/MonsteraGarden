@@ -1,13 +1,28 @@
 <div class="navbar">
-    <div class="navbar_box glass navbar-font">
+    <div class="navbar_box glass">
 
-        <div class="navbar_logo_box">
+        <div class="navbar_logo_box navbar-font">
             <div class="navbar_logo"></div>
             🌵 Monstera Garden 🌵
         </div>
 
-        <button class="navbar_button" (click)="this.toggleOnArrow()">
-            <img class="invert" src="assets/icons/expand_more.svg" alt="My Happy SVG" />
-        </button>
+        <div class="navbar_button_box navbar-font-element">
+
+            <div class="navbar_button_element">
+                <a href="/">Species</a>
+            </div>
+
+            <div class="navbar_button_element">
+                <a href="/">Tips & Tricks</a>
+            </div>
+
+            <div class="navbar_button_element">
+                <a href="/">Pots</a>
+            </div>
+
+            <button class="navbar_button" (click)="this.toggleOnArrow()">
+                <img class="invert" src="assets/icons/expand_more.svg" alt="My Happy SVG" />
+            </button>
+        </div>
     </div>
 </div>

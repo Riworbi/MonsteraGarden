@@ -21,20 +21,30 @@ export class NavbarComponent  implements OnInit {
   public toggleOnArrow() : void {
     if(this.isArrowOn){
       this.isArrowOn = false;
-      anime({
-        targets: '.navbar_button',
-        rotateZ: 90,
-        duration: 380,
-        easing: 'easeOutElastic(1, 50)'
-      });
+      this.animateButtonElements('0vh');
+      this.animateButton(90);
+  
     } else {
       this.isArrowOn = true;
-      anime({
-        targets: '.navbar_button',
-        rotateZ: 0,
-        duration: 380,
-        easing: 'easeOutElastic(1, 50)'
-      });
+      this.animateButtonElements('-120vh');
+      this.animateButton(0);
     }
+  }
+
+  public animateButtonElements(value: String) : void {
+    anime({
+      targets: '.navbar_button_element',
+      right: value,
+      delay: anime.stagger(100)
+    });
+  }
+  
+  public animateButton(rotateVal: Number) : void {
+    anime({
+      targets: '.navbar_button',
+      rotateZ: rotateVal,
+      duration: 380,
+      easing: 'easeOutElastic(1, 50)'
+    });
   }
 }

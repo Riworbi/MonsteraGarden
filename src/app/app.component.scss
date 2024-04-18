@@ -1,20 +1,20 @@
 .top-line {
-    height: 20px; /* Adjust as needed */
-    width: 100%;
-    background-color: #333; /* Example color */
+  height: 20px; /* Adjust as needed */
+  width: 100%;
+  background-color: #333; /* Example color */
 }
 
 .sticky-header {
-    position: fixed;
-    top: 20px; /* Distance from top line */
-    width: 100%;
-    background-color: #fff; /* Example color */
-    border-bottom: 1px solid #ccc; /* Example border */
-    padding: 10px 0; /* Example padding */
-    z-index: 1000; /* Ensure the header stays above other content */
+  position: fixed;
+  top: 20px; /* Distance from top line */
+  width: 100%;
+  background-color: #fff; /* Example color */
+  border-bottom: 1px solid #ccc; /* Example border */
+  padding: 10px 0; /* Example padding */
+  z-index: 1000; /* Ensure the header stays above other content */
 }
 
 .content {
-    /* Add some padding to ensure content isn't covered by the sticky header */
-    padding-top: 60px; /* Height of the sticky header + any additional padding */
+  /* Add some padding to ensure content isn't covered by the sticky header */
+  padding-top: 60px; /* Height of the sticky header + any additional padding */
 }
