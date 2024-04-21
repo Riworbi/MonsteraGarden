@@ -1,8 +1,4 @@
-.top-line {
-  height: 20px; /* Adjust as needed */
-  width: 100%;
-  background-color: #333; /* Example color */
-}
+
 
 .sticky-header {
   position: fixed;
@@ -14,7 +10,3 @@
   z-index: 1000; /* Ensure the header stays above other content */
 }
 
-.content {
-  /* Add some padding to ensure content isn't covered by the sticky header */
-  padding-top: 60px; /* Height of the sticky header + any additional padding */
-}

@@ -8,19 +8,19 @@
 
         <div class="navbar_button_box navbar-font-element">
 
-            <div class="navbar_button_element">
+            <div class="navbar_button_element" [ngClass]="{'navbar_reset_position' : this.getBarActivated()}">
                 <a href="/">Species</a>
             </div>
 
-            <div class="navbar_button_element">
-                <a href="/">Tips & Tricks</a>
+            <div class="navbar_button_element" [ngClass]="{'navbar_reset_position' : this.getBarActivated()}">
+                <a href="/">Guide</a>
             </div>
 
-            <div class="navbar_button_element">
-                <a href="/">Contact us</a>
+            <div class="navbar_button_element" [ngClass]="{'navbar_reset_position' : this.getBarActivated()}">
+                <a href="/">About us</a>
             </div>
 
-            <button class="navbar_button" (click)="this.toggleOnArrow()">
+            <button class="navbar_button" (click)="this.toggleOnArrow()" [ngClass]="{'navbar_button_arrow_left' : this.getBarActivated()}">
                 <img class="invert" src="assets/icons/expand_more.svg" alt="My Happy SVG" />
             </button>
         </div>
