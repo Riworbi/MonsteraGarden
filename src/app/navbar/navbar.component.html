@@ -2,8 +2,12 @@
     <div class="navbar_box glass">
 
         <div class="navbar_logo_box navbar-font">
-            <div class="navbar_logo"></div>
-            🌵 Monstera Garden 🌵
+            <div class="navbar_logo">
+                <a routerLink="/">
+                    Monstera Garden
+                </a>
+            </div>
+       
         </div>
 
         <div class="navbar_button_box navbar-font-element">
@@ -17,10 +21,11 @@
             </div>
 
             <div class="navbar_button_element" [ngClass]="{'navbar_reset_position' : this.getBarActivated()}">
-                <a href="/">About us</a>
+                <a routerLink="/about-us">About us</a>
             </div>
 
-            <button class="navbar_button" (click)="this.toggleOnArrow()" [ngClass]="{'navbar_button_arrow_left' : this.getBarActivated()}">
+            <button class="navbar_button" (click)="this.toggleOnArrow()"
+                [ngClass]="{'navbar_button_arrow_left' : this.getBarActivated()}">
                 <img class="invert" src="assets/icons/expand_more.svg" alt="My Happy SVG" />
             </button>
         </div>

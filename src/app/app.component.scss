@@ -1,12 +1,9 @@
-
-
-.sticky-header {
-  position: fixed;
-  top: 20px; /* Distance from top line */
-  width: 100%;
-  background-color: #fff; /* Example color */
-  border-bottom: 1px solid #ccc; /* Example border */
-  padding: 10px 0; /* Example padding */
-  z-index: 1000; /* Ensure the header stays above other content */
-}
-
+video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  

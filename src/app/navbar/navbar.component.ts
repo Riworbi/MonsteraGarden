@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
 import { LocalStorageService } from '../local-storage/local-storage.service';
 import { NgClass } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass,RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })

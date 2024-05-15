@@ -1,0 +1,43 @@
+.div {
+  position: relative;
+  display: flex;
+  top: 100px;
+  margin: 0 11%;
+}
+
+.div2 {
+    position: relative;
+    display: flex;
+    top: 45vh;
+    margin: 0 11%;
+  }
+
+
+.text_box {
+  width: 150vh;
+  height: 50px;
+  color: white;
+  font-family: "Cascadia Code";
+  border-radius: 20px;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.text_header{
+  position: relative;
+  left:500px;
+}
+
+.text_font {
+  font-size: 20px;
+
+}
+
+.text_hide{
+  position: relative;
+  opacity: 1;  
+}
+
+.main{
+  padding-bottom: 70vh;
+}
