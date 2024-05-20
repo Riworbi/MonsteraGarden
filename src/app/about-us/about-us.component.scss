@@ -1,19 +1,20 @@
-.div {
+.main {
+  padding-bottom: 60vh;
+}
+
+// ************************************** ABOUT US **************************************
+
+
+.div_about_us {
   position: relative;
   display: flex;
   top: 100px;
   margin: 0 11%;
+  align-items: center;
+  justify-content: center;
 }
 
-.div2 {
-    position: relative;
-    display: flex;
-    top: 45vh;
-    margin: 0 11%;
-  }
-
-
-.text_box {
+.text_box_about_us {
   width: 150vh;
   height: 50px;
   color: white;
@@ -23,21 +24,60 @@
   overflow: hidden;
 }
 
-.text_header{
+.text_header_about_us {
   position: relative;
-  left:500px;
+  left: 91%;
 }
 
-.text_font {
+.text_font_about_us {
   font-size: 20px;
-
 }
 
-.text_hide{
+.text_hide_about_us {
   position: relative;
-  opacity: 1;  
+  opacity: 1;
 }
 
-.main{
-  padding-bottom: 70vh;
+// ************************************** CONTACT **************************************
+
+.div_contact {
+  position: relative;
+  display: flex;
+  top: 13vh;
+  margin: 0 11%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.text_header_contact {
+  position: relative;
+  margin: 0 auto;
+}
+
+
+.text_box_contact{
+  width: 150vh;
+  height: 200px;
+  color: white;
+  font-family: "Cascadia Code";
+  border-radius: 20px;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.mail {
+  text-decoration: none;
+  color: white;
+  justify-content: baseline;
+}
+
+
+.list_box_contact{
+  display: flex;
+  flex-direction: column;
+}
+
+.list_box_contact a {
+  margin-top: 20px;
 }

@@ -13,8 +13,10 @@ import { BrowserModule } from '@angular/platform-browser';
 })
 export class AboutUsComponent implements OnInit {
 
+  hideContact : boolean | undefined;
+
   ngOnInit(): void {
-    this.animateButton(0);
+    this.animateAboutUs();
   }
 
   public isScrollBelow(value: number ) : boolean{
@@ -22,21 +24,32 @@ export class AboutUsComponent implements OnInit {
   }
 
   @HostListener("window:scroll", []) onWindowScroll() {
-    if(scrollY > 100){
-      this.animateButton(0);
-    } 
+    if(scrollY > 110){
+      this.hideContact= true;
+     } else {
+      this.hideContact = false;
+     } 
   }
 
-  public animateButton(rotateVal: Number): void {
+  animateAboutUs() {
+    this.textAnimation('.text_hide_about_us');
+    this.boxAnimation('.text_box_about_us');
+    this.headerAnimation('.text_header_about_us');
+  }
+
+  textAnimation(target: string) {
     anime({
-      targets: '.text_hide',
+      targets: target,
       delay: 1300,
       duration: 550,
       opacity: 1,
       easing: 'easeInOutQuad'
     });
+  }
+
+  boxAnimation(target: string) {
     anime({
-      targets: '.text_box',
+      targets: target,
       width: '150vh',
       height: '500px',
       left: 0,
@@ -44,8 +57,11 @@ export class AboutUsComponent implements OnInit {
       duration: 500,
       easing: 'easeInOutQuad'
     });
+  }
+
+  headerAnimation(target: string) {
     anime({
-      targets: '.text_header',
+      targets: target,
       left: 0,
       delay: 1000,
       duration: 500,
