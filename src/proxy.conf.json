@@ -4,7 +4,7 @@
       "secure": false,
       "changeOrigin": true,
       "pathRewrite": {
-        "^/api": "/api/v1/plants"
+        "^/api": "/api/v1/plants/search"
       }
     }
   }

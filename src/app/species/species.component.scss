@@ -9,5 +9,23 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   padding: 20px 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.plants-w a{
+  margin: 50px;
   color: white;
+}
+
+
+.plants-b a{
+  margin: 50px;
+  color: black;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
 }
