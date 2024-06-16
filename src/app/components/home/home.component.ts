@@ -8,16 +8,8 @@ import anime from 'animejs';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent implements OnInit {
-  ngOnInit(): void {
-    this.animateHeader(2);
-  }
+export class HomeComponent  {
+ 
 
-  public animateHeader(stagger: Number): void {
-    anime({
-      targets: '.header-josefin',
-      translateX: 250,
-      rotate: 540,
-    });
-  }
+ 
 }
