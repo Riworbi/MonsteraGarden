@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { map, Observable, of, Subscription } from 'rxjs';
+import { delay, map, Observable, of, Subscription } from 'rxjs';
 import { ControllerService } from '../../controller/controller.service';
 import { Plant } from '../../model/plant';
 import { CacheService } from '../../cache/cache.service';
@@ -13,19 +13,27 @@ import { CacheService } from '../../cache/cache.service';
   styleUrl: './species.component.scss',
 })
 export class SpeciesComponent implements OnInit, OnDestroy {
-  constructor(public controller: ControllerService, public cache: CacheService) { }
+  constructor(
+    public controller: ControllerService,
+    public cache: CacheService
+  ) {}
 
-
-  plants: Observable<Plant[]> = of();
+  plants: Plant[] = [];
   sizeOfArray: number = 0;
 
-
   ngOnInit(): void {
-    this.controller.getTrefle().pipe(map(((array: Plant[]) => { if (!this.cache.get("plants")) this.cache.set("plants", array) }))).subscribe();
-    console.log(this.cache.get("plants"));
+    if (this.plants.length === 0) {
+      this.controller.getTrefle().subscribe(
+        (plants) => {
+          this.plants = plants;
+          console.log('Plants loaded successfully:', this.plants);
+        },
+        (error) => {
+          console.error('Error loading plants:', error);
+        }
+      );
+    }
   }
 
-  ngOnDestroy(): void {
-  }
-
+  ngOnDestroy(): void {}
 }

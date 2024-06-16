@@ -7,16 +7,14 @@ import { LocalStorageService } from '../../local-storage/local-storage.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgClass,RouterLink],
+  imports: [NgClass, RouterLink],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnInit {
+  constructor(private localStorage: LocalStorageService) {}
 
-  constructor(private localStorage: LocalStorageService) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public toggleOnArrow(): void {
     this.setBarActivated(!this.getBarActivated());
@@ -33,7 +31,7 @@ export class NavbarComponent implements OnInit {
     anime({
       targets: '.navbar_button_element',
       right: value,
-      delay: anime.stagger(100)
+      delay: anime.stagger(100),
     });
   }
 
@@ -42,15 +40,15 @@ export class NavbarComponent implements OnInit {
       targets: '.navbar_button',
       rotateZ: rotateVal,
       duration: 380,
-      easing: 'easeOutElastic(1, 50)'
+      easing: 'easeOutElastic(1, 50)',
     });
   }
 
   public setBarActivated(value: boolean) {
-    this.localStorage.setCache("BarActivated", value.toString());
+    this.localStorage.setCache('BarActivated', value.toString());
   }
 
   public getBarActivated(): boolean {
-    return this.localStorage.getCache("BarActivated") === 'true' ? true : false;
+    return this.localStorage.getCache('BarActivated') === 'true' ? true : false;
   }
 }

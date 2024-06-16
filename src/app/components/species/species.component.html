@@ -1,9 +1,17 @@
-<div class="species_box">
+<div class="species_box" *ngIf="plants.length !== 0">
 
     <div class="column">
-      
+        <div class="plants-w" *ngFor="let item of this.plants | slice: 0 : (this.plants.length/2); index as i">
+            <a href="https://www.google.com/search?q={{item.scientific_name}}">{{item.scientific_name}}</a>
+        </div>
     </div>
 
+    <div class="column">
+        <div class="plants-w"
+            *ngFor="let item of this.plants | slice: (this.plants.length/2) : this.plants.length; index as i">
+            <a href="https://www.google.com/search?q={{item.scientific_name}}">{{item.scientific_name}}</a>
+        </div>
+    </div>
 
 
 </div>

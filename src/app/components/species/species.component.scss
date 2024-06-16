@@ -13,19 +13,17 @@
   width: 100%;
 }
 
-
-.plants-w a{
-  margin: 50px;
-  color: white;
+ 
+.plants-w a {
+  text-decoration: none;
+  margin:  20px;
+  color: white; 
+  font-size: 20px;
 }
 
-
-.plants-b a{
-  margin: 50px;
-  color: black;
-}
-
-.column{
+.column {
   display: flex;
   flex-direction: column;
+  margin: 15px; 
+  gap: 30px
 }

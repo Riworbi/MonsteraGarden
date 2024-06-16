@@ -6,9 +6,9 @@ import { MainComponent } from './components/main/main.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent,MainComponent],
+  imports: [RouterOutlet, NavbarComponent, MainComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'MonsteraGarden';
