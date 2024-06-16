@@ -1,7 +1,7 @@
 <div class="main">
 
 
-    <div class="species_box">
+    <div class="home_box first_box">
 
         <div class="home_header">
 
@@ -13,16 +13,27 @@
 
     </div>
 
-    <div class="species_box_2">
 
-        <div class="species_box_2_left"><img src="../../../assets/gallery/width_550.webp" alt=""></div>
-        <div class="species_box_2_right font text_l">Monstera Garden site was created with one purpose in mind: to bring
+
+    <div class="animate__animated animate__fadeIn home_box second_box" *ngIf="this.showSecondBox">
+
+        <div class="second_box_left animate__animated animate__backInLeft"><img
+                src="../../../assets/gallery/width_550.webp" alt=""></div>
+        <div class="second_box_right font text_l animate__animated animate__backInRight">Monstera Garden site was
+            created with one purpose in mind: to bring
             the beauty and tranquility of lush greenery into your life. </div>
     </div>
 
 
-    <div class="species_box_3">
-
+    <div class="home_box third_box animate__animated animate__fadeIn home_box second_box" *ngIf="this.showThirdBox">
+        <div class="third_box_left font text_l animate__animated animate__backInUp">
+            <h2>History</h2>
+            <p>They are beatiful aren't they? Acording to <a href="https://edis.ifas.ufl.edu/publication/HS311">EDIS</a>
+                Monstera was introduced to England in 1752,
+                Singapore in 1877, and India in 1878. The fruit was introduced to the US in 1874.</p>
+        </div>
+        <div class="third_box_right animate__animated animate__backInDown"><img
+                src="../../../assets/gallery/beatufiul_monstera.jpg" alt=""></div>
     </div>
 
 </div>

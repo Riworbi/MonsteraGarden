@@ -1,8 +1,6 @@
-import { InvokeFunctionExpr } from '@angular/compiler';
 import { Component, HostListener, OnInit } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
 import { CommonModule } from '@angular/common'; // Import CommonModule here
-import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about-us',
@@ -17,10 +15,6 @@ export class AboutUsComponent implements OnInit {
 
   ngOnInit(): void {
     this.animateAboutUs();
-  }
-
-  public isScrollBelow(value: number ) : boolean{
-    return scrollY > value;
   }
 
   @HostListener("window:scroll", []) onWindowScroll() {
