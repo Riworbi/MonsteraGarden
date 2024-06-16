@@ -1,28 +1,71 @@
 <div class="main">
 
 
-    <div class="species_box">
+    <div class="home_box first_box flex_column">
 
         <div class="home_header">
 
             <h3 class="font header"> Welcome to Monstera Garden</h3>
-            <h3 class="animate__animated animate__wobble  animate__repeat-3 animate_faster font header">
-                👋</h3>
+            <h3 class="animate__animated animate__wobble  animate__repeat-3 animate_faster font header">👋</h3>
+
         </div>
-
-
+        <div class="arrow_box animate__animated  animate__pulse animate__infinite" (click)="this.scrollDown(0,700)">
+            <img class="arrow" src="../../../assets/icons/expand_more.svg" alt="">
+        </div>
     </div>
 
-    <div class="species_box_2">
+    <ng-container *ngIf="showSecondBox; else secondBoxOut" id="secondBox">
+        <div class="animate__animated animate__fadeIn home_box second_box">
+            <div class="second_box_left animate__animated animate__backInLeft">
+                <img src="../../../assets/gallery/width_550.webp" alt="">
+            </div>
+            <div class="second_box_right font text_l animate__animated animate__backInRight">
+                Monstera Garden site was created with one purpose in mind: to bring the beauty and tranquility of lush
+                greenery into your life.
+            </div>
+        </div>
+    </ng-container>
 
-        <div class="species_box_2_left"><img src="../../../assets/gallery/width_550.webp" alt=""></div>
-        <div class="species_box_2_right font text_l">Monstera Garden site was created with one purpose in mind: to bring
-            the beauty and tranquility of lush greenery into your life. </div>
-    </div>
+    <ng-template #secondBoxOut>
+        <div class="animate__animated animate__fadeOut home_box second_box">
+            <div class="second_box_left animate__animated animate__fadeOut">
+                <img src="../../../assets/gallery/width_550.webp" alt="">
+            </div>
+            <div class="second_box_right font text_l animate__animated animate__fadeOut">
+                Monstera Garden site was created with one purpose in mind: to bring the beauty and tranquility of lush
+                greenery into your life.
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-container *ngIf="showThirdBox; else thirdBoxOut">
+        <div class="home_box third_box animate__animated animate__fadeIn">
+            <div class="third_box_left font text_l animate__animated animate__backInUp">
+                <h2>History</h2>
+                <p>They are beatiful aren't they? Acording to <a
+                        href="https://edis.ifas.ufl.edu/publication/HS311">EDIS</a>
+                    Monstera was introduced to England in 1752,
+                    Singapore in 1877, and India in 1878. The fruit was introduced to the US in 1874.</p>
+            </div>
+            <div class="third_box_right animate__animated animate__backInDown"><img
+                    src="../../../assets/gallery/beatufiul_monstera.jpg" alt=""></div>
+        </div>
+    </ng-container>
+
+    <ng-template #thirdBoxOut>
+        <div class="home_box third_box animate__animated animate__fadeOut">
+            <div class="third_box_left font text_l animate__animated animate__fadeOut">
+                <h2>History</h2>
+                <p>They are beatiful aren't they? Acording to <a
+                        href="https://edis.ifas.ufl.edu/publication/HS311">EDIS</a>
+                    Monstera was introduced to England in 1752,
+                    Singapore in 1877, and India in 1878. The fruit was introduced to the US in 1874.</p>
+            </div>
+            <div class="third_box_right animate__animated animate__fadeOut"><img
+                    src="../../../assets/gallery/beatufiul_monstera.jpg" alt=""></div>
+        </div>
+    </ng-template>
 
 
-    <div class="species_box_3">
-
-    </div>
 
 </div>

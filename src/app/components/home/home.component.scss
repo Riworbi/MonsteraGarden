@@ -1,68 +1,91 @@
 .main {
   padding-bottom: 500vh;
+  scroll-behavior: smooth;
 }
 
-.home_box{
+.home_box {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.25);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   flex-wrap: wrap;
   width: 80%;
   height: 500px;
 }
 
-.species_box {
-  position: relative;
-  display: flex;
+.flex_column{
+  flex-direction: column;
+}
+
+.first_box {
   top: 100px;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  flex-wrap: wrap;
   width: 100%;
   height: 500px;
 }
 
-.species_box_2 {
-  position: relative;
-  display: flex;
-  top: 200px;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+.second_box {
+  top: 300px;
   border-radius: 15px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  flex-wrap: wrap;
   margin: 0 auto;
   width: 80%;
   height: 500px;
 }
 
-.species_box_2_left  img{
+.second_box_left img {
   width: 450;
   height: 450px;
   border-radius: 20px;
   border: white 5px solid;
 }
 
-.species_box_2_left {
+.second_box_left {
 
   display: flex;
   justify-content: center;
   width: 50%;
 }
 
-.species_box_2_right {width: 50%;}
+.second_box_right {
+  width: 50%;
+}
+
+.third_box {
+  top: 400px;
+  border-radius: 15px;
+  margin: 0 auto;
+  width: 80%;
+  height: 500px;
+}
+
+.third_box_left {
+  width: 50%;
+}
+
+.third_box_left p {
+  width: 80%;
+  margin-left: 50px;
+}
+
+.third_box_left h2 {
+  width: 80%;
+  margin-left: 50px;
+}
+
+.third_box_right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.third_box_right img {
+  height: 450px;
+  border-radius: 20px;
+  border: white 5px solid;
+}
 
 .plants-w a {
   text-decoration: none;
@@ -90,14 +113,23 @@
   font-style: normal;
 }
 
-.text_l{
+.text_l {
   font-weight: 400;
   font-style: normal;
-  font-size: 35px;
+  font-size: 30px;
 }
 
 .home_header {
   display: flex;
   align-items: flex-end;
   gap: 20px
+}
+
+.arrow {
+  display: block;
+  position: relative;
+  border-radius: 20px;
+  padding: 0 200px;
+  border:black solid;
+  filter: invert(1);
 }
