@@ -1,7 +1,5 @@
-import { Component, HostListener, } from '@angular/core';
-import { CommonModule } from '@angular/common';  
-import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule, ViewportScroller } from '@angular/common';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -9,31 +7,37 @@ import { BrowserModule } from '@angular/platform-browser';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent  {
- 
-  showSecondBox : boolean | undefined;
-  showThirdBox : boolean | undefined;
+export class HomeComponent {
+  constructor(private readonly scroller: ViewportScroller) {}
 
+  showSecondBox: boolean | undefined;
+  showThirdBox: boolean | undefined;
+  scrollIconWasClicked: boolean | undefined;
 
-  @HostListener("window:scroll", []) onWindowScroll() {
-    console.log(scrollY)
+  @HostListener('window:scroll', []) onWindowScroll() {
+    console.log(scrollY);
     this.isSecondBox();
     this.isThirdBox();
   }
- 
-  private isSecondBox() : void{
-    if(scrollY > 200){
-      this.showSecondBox= true;
-     } else {
+
+  private isSecondBox(): void {
+    if (scrollY > 400) {
+      this.showSecondBox = true;
+    } else {
       this.showSecondBox = false;
-     } 
+    }
   }
 
-  private isThirdBox() : void{
-    if(scrollY > 600){
-      this.showThirdBox= true;
-     } else {
+  private isThirdBox(): void {
+    if (scrollY > 800) {
+      this.showThirdBox = true;
+    } else {
       this.showThirdBox = false;
-     } 
+    }
+  }
+
+  public scrollDown(x: number, y: number): void {
+    this.scroller.scrollToPosition([x, y]);
+    this.scrollIconWasClicked = true;
   }
 }
