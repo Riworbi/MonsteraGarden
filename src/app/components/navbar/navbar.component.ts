@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
-import { LocalStorageService } from '../local-storage/local-storage.service';
 import { NgClass } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { LocalStorageService } from '../../local-storage/local-storage.service';
 
 @Component({
   selector: 'app-navbar',
