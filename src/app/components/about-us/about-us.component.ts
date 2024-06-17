@@ -1,28 +1,28 @@
+import { CommonModule } from '@angular/common'; // Import CommonModule here
 import { Component, HostListener, OnInit } from '@angular/core';
 import anime from 'animejs/lib/anime.es.js';
-import { CommonModule } from '@angular/common'; // Import CommonModule here
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './about-us.component.html',
-  styleUrl: './about-us.component.scss'
+  styleUrl: './about-us.component.scss',
 })
 export class AboutUsComponent implements OnInit {
-
-  hideContact : boolean | undefined;
+  showContact: boolean | undefined;
 
   ngOnInit(): void {
+    this.showContact = false;
     this.animateAboutUs();
   }
 
-  @HostListener("window:scroll", []) onWindowScroll() {
-    if(scrollY > 110){
-      this.hideContact= true;
-     } else {
-      this.hideContact = false;
-     } 
+  @HostListener('window:scroll', []) onWindowScroll() {
+    if (scrollY > 110) {
+      this.showContact = true;
+    } else {
+      this.showContact = false;
+    }
   }
 
   animateAboutUs() {
@@ -37,7 +37,7 @@ export class AboutUsComponent implements OnInit {
       delay: 1300,
       duration: 550,
       opacity: 1,
-      easing: 'easeInOutQuad'
+      easing: 'easeInOutQuad',
     });
   }
 
@@ -49,7 +49,7 @@ export class AboutUsComponent implements OnInit {
       left: 0,
       delay: 1000,
       duration: 500,
-      easing: 'easeInOutQuad'
+      easing: 'easeInOutQuad',
     });
   }
 
@@ -59,8 +59,7 @@ export class AboutUsComponent implements OnInit {
       left: 0,
       delay: 1000,
       duration: 500,
-      easing: 'easeInOutQuad'
+      easing: 'easeInOutQuad',
     });
   }
-
 }
