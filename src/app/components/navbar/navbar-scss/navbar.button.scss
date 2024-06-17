@@ -47,6 +47,10 @@
   align-items: center;
 }
 
+.navbar_button_element a {
+  padding: 20px 100px;
+}
+
 .navbar_button_element:hover{
   background: rgba(0, 0, 0, 0.562);
 }

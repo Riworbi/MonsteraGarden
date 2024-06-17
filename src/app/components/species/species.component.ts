@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { delay, map, Observable, of, Subscription } from 'rxjs';
+import { CacheService } from '../../cache/cache.service';
 import { ControllerService } from '../../controller/controller.service';
 import { Plant } from '../../model/plant';
-import { CacheService } from '../../cache/cache.service';
 
 @Component({
   selector: 'app-species',
