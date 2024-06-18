@@ -1,3 +1,8 @@
+.main {
+  padding-bottom: 25vh;
+  scroll-behavior: smooth;
+}
+
 .species_box {
   position: relative;
   display: flex;
@@ -13,23 +18,23 @@
   width: 100%;
 }
 
-.m-b-20{
+.m-b-20 {
   margin-bottom: 20px;
 }
 
-.large_font{
+.large_font {
   font-size: 30px;
 }
 
 
 .plants-w a {
   text-decoration: none;
-  margin:  20px;
-  color: white; 
+  margin: 20px;
+  color: white;
   font-size: 20px;
 }
 
-.small_species_box{
+.small_species_box {
   padding: 50px 50px;
   border-radius: 20px;
 }
@@ -37,6 +42,6 @@
 .column {
   display: flex;
   flex-direction: column;
-  margin: 15px; 
+  margin: 15px;
   gap: 30px
 }
