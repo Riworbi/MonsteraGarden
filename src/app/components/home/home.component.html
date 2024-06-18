@@ -1,7 +1,7 @@
 <div class="main">
 
 
-    <div class="home_box first_box flex_column">
+    <div class="home_box first_box flex_column gap glass-t-b">
 
         <div class="home_header">
 
@@ -15,7 +15,7 @@
     </div>
 
     <ng-container *ngIf="showSecondBox; else secondBoxOut">
-        <div class="animate__animated animate__fadeIn home_box second_box">
+        <div class="animate__animated animate__fadeIn home_box second_box glass">
             <div class="second_box_left animate__animated animate__backInLeft">
                 <img src="../../../assets/gallery/width_550.webp" alt="">
             </div>
@@ -39,7 +39,7 @@
     </ng-template>
 
     <ng-container *ngIf="showThirdBox; else thirdBoxOut">
-        <div class="home_box third_box animate__animated animate__fadeIn">
+        <div class="home_box third_box animate__animated animate__fadeIn glass">
             <div class="third_box_left font text_l animate__animated animate__backInUp">
                 <h2>History</h2>
                 <p>They are beatiful aren't they? Acording to <a

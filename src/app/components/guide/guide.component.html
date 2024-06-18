@@ -1,31 +1,47 @@
 <div class="main">
 
 
-    <div class="guide_box">
+    <div class="guide_box animate__animated animate__fadeIn">
 
-        <!-- <div class="article_title font" *ngIf="article">
+        <div class="article_title font glass" *ngIf="article">
             <h1>{{ article.title }}</h1>
         </div>
-         -->
+        
 
         <div class="article" *ngIf="article">
 
 
 
             <div *ngFor="let section of article.sections; let i = index">
-                <div (mouseenter)="mouseOver(i)" (mouseleave)="mouseLeave(i)" class="section_heading font">
-                    
-                    <div class="header">
-                        <h2>{{ section.heading }}</h2>
-                    </div>
-                    <div class="test animate__animated animate__fadeIn" *ngIf="hoveredSectionIndex === i">
-                        <ul class="font">
-                            <li *ngFor="let content of section.content">{{ content }}</li>
-                        </ul>
-                    </div>
+                <div (mouseenter)="mouseOver(i)" (mouseleave)="mouseLeave(i)" class="section_heading font glass">
+
+                    <ng-container *ngIf="hoveredSectionIndex === i; else out">
+                        <div class="header  animate__animated animate__pulse animate__infinite">
+                            <h2>{{ section.heading }}</h2>
+                        </div>
+
+                        <div class="test animate__animated animate__fadeIn">
+                            <ul class="font">
+                                <li *ngFor="let content of section.content">{{ content }}</li>
+                            </ul>
+                        </div>
+                    </ng-container>
+
+                    <ng-template #out>
+                        <div class="header">
+                            <h2>{{ section.heading }}</h2>
+                        </div>
+                        <div class="test animate__animated animate__fadeOut">
+                            <ul class="font">
+                                <li *ngFor="let content of section.content">{{ content }}</li>
+                            </ul>
+                        </div>
+                    </ng-template>
+
+
                 </div>
             </div>
-            
+
         </div>
     </div>
 

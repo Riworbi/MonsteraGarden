@@ -17,6 +17,15 @@ body, html {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.glass-t-b {
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: solid rgba(255, 255, 255, 0.18);
+  border-width: 1px 0 1px 0px;
+}
+
 // fonts -------------------------------------------
 .navbar-font {
   font-family: "Itim", cursive;

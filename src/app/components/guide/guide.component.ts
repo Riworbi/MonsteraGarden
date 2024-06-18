@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { monsteraCareArticle, MonsteraCareTips } from '../../articles/Guide';
 import { CommonModule } from '@angular/common';
+import anime from 'animejs';
 
 @Component({
   selector: 'app-guide',
@@ -21,6 +22,4 @@ export class GuideComponent {
   mouseLeave(index: number) {
     this.hoveredSectionIndex = null;
   }
-
-
 }

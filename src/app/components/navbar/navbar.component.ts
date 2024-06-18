@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
       this.animateButtonElements('0vh');
       this.animateButton(90);
     } else {
-      this.animateButtonElements('-120vh');
+      this.animateButtonElements('-500vh');
       this.animateButton(0);
     }
   }
@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
     anime({
       targets: '.navbar_button_element',
       right: value,
-      delay: anime.stagger(100),
+      delay: anime.stagger(50),
     });
   }
 
