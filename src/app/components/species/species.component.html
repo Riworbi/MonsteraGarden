@@ -7,18 +7,19 @@
 
 <div class="animate__animated animate__fadeIn  species_box font glass-t-b" *ngIf="plants.length !== 0">
 
-    <div class="column">
+    <div class="glass column small_species_box">
         <div class="random_left plants-w"
             *ngFor="let item of this.plants | slice: 0 : (this.plants.length/2); index as i">
             <a href="https://www.google.com/search?q={{item.scientific_name}}">{{item.scientific_name}}</a>
         </div>
     </div>
 
-    <div class="column">
+    <div class="glass column small_species_box">
         <div class="random_right plants-w"
             *ngFor="let item of this.plants | slice: (this.plants.length/2) : this.plants.length; index as i">
             <a href="https://www.google.com/search?q={{item.scientific_name}}">{{item.scientific_name}}</a>
         </div>
     </div>
+
 
 </div>

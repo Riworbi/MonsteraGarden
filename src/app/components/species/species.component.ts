@@ -25,11 +25,8 @@ export class SpeciesComponent implements OnInit, OnDestroy {
       this.controller.getTrefle().subscribe(
         (plants) => {
           this.plants = plants;
-          console.log('Plants loaded successfully:', this.plants);
         },
-        (error) => {
-          console.error('Error loading plants:', error);
-        }
+        (error) => {}
       );
     }
   }
