@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "https://trefle.io/api/v1/plants/search/$1"
+      }
+    ]
+  }
+  

@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "https://trefle.io",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": "/api/v1/plants/search"
+      }
+    }
+  }
+  
