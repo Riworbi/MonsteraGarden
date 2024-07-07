@@ -21,12 +21,12 @@
   align-items: center;
 }
 
-.navbar_button:hover{
+.navbar_button:hover {
   background: rgba(0, 0, 0, 0.562);
 }
 
-.navbar_button_arrow_left{
-  transform: rotateZ(90deg) ;
+.navbar_button_arrow_left {
+  transform: rotateZ(90deg);
 }
 
 .navbar_button_element {
@@ -51,11 +51,11 @@
   padding: 20px 100px;
 }
 
-.navbar_button_element:hover{
+.navbar_button_element:hover {
   background: rgba(0, 0, 0, 0.562);
 }
 
-.navbar_reset_position{
+.navbar_reset_position {
   right: 0vh;
   position: relative;
 }
