@@ -14,12 +14,7 @@ import { LocalStorageService } from '../../local-storage/local-storage.service';
 export class NavbarComponent implements OnInit {
   constructor(private localStorage: LocalStorageService) {}
 
-  ngOnInit(): void { 
-  }
-
-  public isWidthBelow600() : boolean {
-    return window.innerWidth > 600;
-  }
+  ngOnInit(): void {}
 
   public toggleOnArrow(): void {
     this.setBarActivated(!this.getBarActivated());
