@@ -1,8 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CacheService } from '../../cache/cache.service';
-import { ControllerService } from '../../controller/controller.service';
-import { Plant } from '../../model/plant';
+import {
+  googleQuery,
+  MonsteraSpiece,
+  monsteraSpieces,
+} from '../../articles/Species';
 
 @Component({
   selector: 'app-species',
@@ -12,24 +14,14 @@ import { Plant } from '../../model/plant';
   styleUrl: './species.component.scss',
 })
 export class SpeciesComponent implements OnInit, OnDestroy {
-  constructor(
-    public controller: ControllerService,
-    public cache: CacheService
-  ) {}
+  constructor() {}
 
-  plants: Plant[] = [];
+  spiecies: MonsteraSpiece = monsteraSpieces;
+  query: string = googleQuery;
+
   sizeOfArray: number = 0;
 
-  ngOnInit(): void {
-    if (this.plants.length === 0) {
-      this.controller.getTrefle().subscribe(
-        (plants) => {
-          this.plants = plants;
-        },
-        (error) => {}
-      );
-    }
-  }
+  ngOnInit(): void {}
 
   ngOnDestroy(): void {}
 }
