@@ -17,7 +17,7 @@
   height: 500px;
 }
 
-.flex_column{
+.flex_column {
   flex-direction: column;
 }
 
@@ -53,6 +53,10 @@
   width: 50%;
 }
 
+.second_box_right p {
+  margin-right: 50px;
+}
+
 .third_box {
   top: 400px;
   border-radius: 15px;
@@ -66,7 +70,7 @@
 }
 
 .third_box_left p {
-  width: 80%;
+  width: 100%;
   margin-left: 50px;
 }
 
@@ -126,10 +130,10 @@
   position: relative;
   border-radius: 20px;
   padding: 0 200px;
-  border:black solid;
+  border: black solid;
   filter: invert(1);
 }
 
-.gap{
+.gap {
   gap: 100px;
 }

@@ -18,7 +18,8 @@
   width: 150vh;
   height: 50px;
   color: white;
-  font-family: "Cascadia Code";
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
   border-radius: 20px;
   padding: 50px;
   overflow: hidden;
@@ -56,11 +57,12 @@
 }
 
 
-.text_box_contact{
+.text_box_contact {
   width: 150vh;
   height: 200px;
   color: white;
-  font-family: "Cascadia Code";
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
   border-radius: 20px;
   padding: 50px;
   overflow: hidden;
@@ -73,7 +75,7 @@
 }
 
 
-.list_box_contact{
+.list_box_contact {
   display: flex;
   flex-direction: column;
 }
