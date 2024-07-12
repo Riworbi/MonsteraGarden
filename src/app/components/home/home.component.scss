@@ -21,6 +21,15 @@
   flex-direction: column;
 }
 
+.round_image{
+  border: white 5px solid;
+  border-radius: 100%;
+  width: 120px;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+}
+
 .first_box {
   top: 100px;
   width: 100%;
@@ -91,6 +100,33 @@
   border: white 5px solid;
 }
 
+.fourth_parent_box {
+  display: flex;
+  width: 89%;
+  margin: 0 auto;
+}
+
+.fourth_box {
+  top: 500px;
+  border-radius: 15px;
+  margin: 0 auto;
+  width: 40%;
+  height: 500px;
+}
+
+.fourth_box_header{
+  position: fixed;
+  top: 55px;
+  left: 50%;
+}
+
+.fourth_box_text{
+  font-size: 24px;
+  position: fixed;
+  margin: 0 30px;
+  margin-top: 70px;
+}
+
 .plants-w a {
   text-decoration: none;
   margin: 20px;
@@ -104,8 +140,6 @@
   margin: 15px;
   gap: 30px
 }
-
-
 
 .header {
   font-weight: 400;
