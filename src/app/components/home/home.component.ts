@@ -12,12 +12,14 @@ export class HomeComponent {
 
   showSecondBox: boolean | undefined;
   showThirdBox: boolean | undefined;
+  showFourthBox: boolean | undefined;
   scrollIconWasClicked: boolean | undefined;
 
   @HostListener('window:scroll', []) onWindowScroll() {
     console.log(scrollY);
     this.isSecondBox();
     this.isThirdBox();
+    this.isFourthBox();
   }
 
   private isSecondBox(): void {
@@ -33,6 +35,14 @@ export class HomeComponent {
       this.showThirdBox = true;
     } else {
       this.showThirdBox = false;
+    }
+  }
+
+  private isFourthBox(): void {
+    if(scrollY > 1600 ) {
+      this.showFourthBox = true;
+    } else {
+      this.showFourthBox = false;
     }
   }
 

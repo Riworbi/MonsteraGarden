@@ -72,12 +72,11 @@
         </div>
     </ng-template>
 
-    <ng-container>
-
+    <ng-container *ngIf="showFourthBox; else fourthBoxOut">
         <div class="fourth_parent_box">
-            <div class="home_box font text_l fourth_box glass">
+            <div class="home_box font text_l fourth_box glass animate__animated animate__backInUp">
 
-                <img class="round_image" src="../../../assets/gallery/flower_ai_monstera.jpg" alt="">
+                <img class="line_image" src="../../../assets/gallery/flower_ai_monstera.jpg" alt="">
 
                 <div class="fourth_box_header">
                     Origins
@@ -96,11 +95,72 @@
 
             </div>
 
-            <div class="home_box fourth_box glass">
+            <div class="home_box font text_l fourth_box glass animate__animated animate__backInUp">
+               
+                <img class="line_image" src="../../../assets/gallery/flower_monstera.jpg" alt="">
+               
+                <div class="fourth_box_header">
+                    Leaves
+                </div>
+
+                <div class="fourth_box_text">
+                    <p>
+                        &nbsp; Monstera leaves are broad and heart-shaped with a lush green color. They have a glossy
+                        texture and feature natural splits and holes, creating a unique pattern that resembles Swiss
+                        cheese. The edges of the leaves are typically smooth and slightly wavy, and the veins are
+                        prominent, giving the leaves a structured look.
+                    </p>
+                </div>
+
 
             </div>
         </div>
     </ng-container>
 
+    <ng-template #fourthBoxOut>
+        <div class="fourth_parent_box"> 
+            <div class="home_box font text_l fourth_box glass animate__animated animate__fadeOut">
+
+                <img class="line_image" src="../../../assets/gallery/flower_ai_monstera.jpg" alt="">
+
+                <div class="fourth_box_header">
+                    Origins
+                </div>
+
+                <div class="fourth_box_text">
+                    <p>
+                        &nbsp;Monstera species are native to the tropical regions of the Americas, particularly in
+                        countries like Mexico, Panama, Costa Rica, Guatemala, and Brazil.
+                    </p>
+                    <p>
+                        &nbsp;In their natural habitat, Monstera plants climb trees using their aerial roots, which
+                        helps them reach sunlight while staying rooted in nutrient-rich, moist soil.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="home_box font text_l fourth_box glass animate__animated animate__fadeOut">
+               
+                <img class="line_image" src="../../../assets/gallery/flower_monstera.jpg" alt="">
+               
+                <div class="fourth_box_header">
+                    Leaves
+                </div>
+
+                <div class="fourth_box_text">
+                    <p>
+                        &nbsp; Monstera leaves are broad and heart-shaped with a lush green color. They have a glossy
+                        texture and feature natural splits and holes, creating a unique pattern that resembles Swiss
+                        cheese. The edges of the leaves are typically smooth and slightly wavy, and the veins are
+                        prominent, giving the leaves a structured look.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </ng-template>
+    
 
 </div>
