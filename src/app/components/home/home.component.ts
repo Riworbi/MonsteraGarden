@@ -16,7 +16,6 @@ export class HomeComponent {
   scrollIconWasClicked: boolean | undefined;
 
   @HostListener('window:scroll', []) onWindowScroll() {
-    console.log(scrollY);
     this.isSecondBox();
     this.isThirdBox();
     this.isFourthBox();
